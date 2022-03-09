@@ -15,7 +15,7 @@ function Header(){
     const [cart] = state.userAPI.cart
 
     const logoutUser = async () =>{
-      await axios.get('http://localhost:5001/user/logout')
+      await axios.get('/user/logout')
       localStorage.clear()
       window.location.href = "/";
     }
