@@ -15,7 +15,7 @@ function Header(){
     const [cart] = state.userAPI.cart
 
     const logoutUser = async () =>{
-      await axios.get('/user/logout')
+      await axios.get('https://ecommerce1-back.herokuapp.com/user/logout')
       localStorage.clear()
       window.location.href = "/";
     }
