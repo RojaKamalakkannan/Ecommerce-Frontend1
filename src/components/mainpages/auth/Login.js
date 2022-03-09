@@ -21,7 +21,7 @@ function Login() {
 
             window.location.href = "/";
         }catch (err){
-            alert(err.response.data.msg)
+            alert("InvalidUser")
         }
     }
 
