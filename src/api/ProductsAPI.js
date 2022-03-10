@@ -5,7 +5,7 @@ function ProductsAPI() {
     const [products, setProducts] = useState([])
 
     const getProducts = async () => {
-        const res = await axios.get('/api/products')
+        const res = await axios.get('http://ecommerce1-back.herokuapp.com/api/products')
         setProducts(res.data.products)
     }
 
