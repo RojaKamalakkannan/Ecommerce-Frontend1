@@ -21,7 +21,7 @@ function Cart() {
     },[cart])
 
     const addToCart = async () =>{
-        await axios.patch('https://ecommerce1-back.herokuapp.com/user/addcart',{cart},{
+        await axios.patch('/user/addcart',{cart},{
             headers: {Authorization: token}
         })
     }

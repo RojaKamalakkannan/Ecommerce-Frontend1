@@ -11,7 +11,7 @@ function UserAPI(token) {
        if(token){
            const getUser = async () =>{
                try{
-                  const res = await axios.get('https://ecommerce1-back.herokuapp.com/user/infor',{
+                  const res = await axios.get('/user/infor',{
                       headers: {Authorization: token}
                   })
 
@@ -38,12 +38,12 @@ function UserAPI(token) {
         if(check){
             setCart([...cart, {...product, quantity: 1}])
 
-            await axios.patch('https://ecommerce1-back.herokuapp.com/user/addcart', {cart: [...cart, {...product, quantity: 1}]}, {
+            await axios.patch('/user/addcart', {cart: [...cart, {...product, quantity: 1}]}, {
                 headers: {Authorization: token}
             })
 
         }else{
-            alert ("This product has been added to cart.")
+            alert ("This product already has been added to cart.")
         }
     }
 
